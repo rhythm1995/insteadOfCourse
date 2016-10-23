@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="https://use.fontawesome.com/c334c419c0.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body ng-app="myApp" ng-controller="userCtrl">
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar">1</span>
+                <span class="icon-bar">2</span>
+                <span class="icon-bar">3</span>
+            </button>
+            <a href="index.html" class="navbar-brand">代课宝</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../getting-started/">找人代课</a>
+                </li>
+                <li class="active">
+                    <a href="../css/"></a>
+                </li>
+                <li>
+                    <a href="../components/">为人代课</a>
+                </li>
+                <li>
+                    <a href="../javascript/">JavaScript 插件</a>
+                </li>
+                <li>
+                    <a href="../customize/">定制</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://job.bootcss.com" onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'doc-home-navbar-job'])" target="_blank">登录</a></li>
+                <li><a href="http://expo.bootcss.com" onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'doc-home-navbar-expo'])" target="_blank">注册</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="banner">
+        <div class="banner_conter">
+            <h1>代课宝</h1>
+            <p>代课宝是专业进行代理上课的平台</p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div>
+        <ol class="activity-feed">
+            <li class="feed-item" data-content="" data-time="3 hours ago" data-color="green">
+                <section>
+                    <input type="checkbox" id="expand_1" name="expand_1" />
+                    <label for="expand_1">
+                        <b>Etiam feugiat</b> dolor nec molestie <b>posuere.</b>
+                    </label>
+                    <main class="content">
+                        <blockquote>Duis iaculis commodo condimentum. Donec quis felis libero. Nunc feugiat nisi ut ullamcorper congue. Ut tempus egestas mauris et scelerisque. Sed tincidunt ante ligula, eget pharetra mi pretium eget. Fusce tincidunt, elit blandit semper sollicitudin,
+                            sapien lectus lobortis quam, ac bibendum lectus risus quis lectus.</blockquote>
+                        <blockquote>Duis iaculis commodo condimentum. Donec quis felis libero. Nunc feugiat nisi ut ullamcorper congue. Ut tempus egestas mauris et scelerisque. Sed tincidunt ante ligula, eget pharetra mi pretium eget. Fusce tincidunt, elit blandit semper sollicitudin,
+                            sapien lectus lobortis quam, ac bibendum lectus risus quis lectus.</blockquote>
+                    </main>
+                </section>
+            </li>
+            <li class="feed-item" data-content="" data-time="3 hours ago" data-color="blue">
+                <section>
+                    <input type="checkbox" id="expand_2" name="expand_2" />
+                    <label for="expand_2">
+                        <b>Aliquam</b> non diam <b>consectetur.</b>
+                    </label>
+                    <main class="content">
+                        <p>Duis iaculis commodo condimentum. Donec quis felis libero. Nunc feugiat nisi ut ullamcorper congue.</p>
+                        <p>Ut tempus egestas mauris et scelerisque. Sed tincidunt ante ligula, eget pharetra mi pretium eget. Fusce tincidunt, elit blandit semper sollicitudin, sapien lectus lobortis quam, ac bibendum lectus risus quis lectus.</p>
+                    </main>
+                </section>
+            </li>
+            <li class="feed-item" data-content="" data-time="3 hours ago" data-color="green">
+                <section>
+                    <label for="expand_4">
+                        <b>Etiam feugiat</b> dolor nec molestie <b>posuere.</b>
+                        <br>
+                        Donec quis felis libero.
+                        <b>Etiam feugiat</b> dolor nec molestie <b>posuere.</b>
+                        <br>
+                        Donec quis felis libero.
+                        <b>Etiam feugiat</b> dolor nec molestie <b>posuere.</b>
+                        <br>
+                        Donec quis felis libero.
+                    </label>
+                </section>
+            </li>
+            <li class="feed-item" data-content="" data-time="3 hours ago" data-color="yellow">
+                <section>
+                    <input type="checkbox" id="expand_5" name="expand_5" />
+                    <label for="expand_5">
+                        <b>Pellentesque accumsan</b> ligula a tincidunt <b>venenatis.</b>
+                    </label>
+                    <main class="content">
+                        <h1>BOOM!</h1>
+                    </main>
+                </section>
+            </li>
+        </ol>
+
+    </div>
+    <div>
+        <h3>Users</h3>
+        <table class="table table-striped">
+            <thead><tr>
+                <th>Edit</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr></thead>
+            <tbody><tr ng-repeat="user in users">
+                <td>
+                    <button class="btn" ng-click="editUser(user.id)">
+                        <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit
+                    </button>
+                </td>
+                <td>{{ user.fName }}</td>
+                <td>{{ user.lName }}</td>
+            </tr></tbody>
+        </table>
+
+        <hr>
+        <button class="btn btn-success" ng-click="editUser('new')">
+            <span class="glyphicon glyphicon-user"></span> Create New User
+        </button>
+        <hr>
+
+        <h3 ng-show="edit">Create New User:</h3>
+        <h3 ng-hide="edit">Edit User:</h3>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">First Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" ng-model="fName" ng-disabled="!edit" placeholder="First Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Last Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" ng-model="lName" ng-disabled="!edit" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" ng-model="passw1" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Repeat:</label>
+                <div class="col-sm-10">
+                    <input type="password" ng-model="passw2" placeholder="Repeat Password">
+                </div>
+            </div>
+        </form>
+
+        <hr>
+        <button class="btn btn-success" ng-disabled="error || incomplete">
+            <span class="glyphicon glyphicon-save"></span> Save Changes
+        </button>
+    </div>
+</div>
+
+<footer>
+    <p>Copyright 2016. All Rights Reserved by CSU APPLE Lab</p>
+</footer>
+<script src="js/angular.js"></script>
+</body>
+</html>

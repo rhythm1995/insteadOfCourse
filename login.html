@@ -6,34 +6,80 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <script src="https://use.fontawesome.com/c334c419c0.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-
 </head>
-<body>
-<div>
-    <form>
-        <form role="form">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <input type="file" id="exampleInputFile">
-                <p class="help-block">Example block-level help text here.</p>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox"> Check me out
-                </label>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-    </form>
-</div>
 
+<body ng-app="myApp" ng-controller="userCtrl">
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">代课宝</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../getting-started/">首页</a>
+                </li>
+                <li>
+                    <a href="../components/">找人代课</a>
+                </li>
+                <li>
+                    <a href="../javascript/">为人代课</a>
+                </li>
+                <li>
+                    <a href="../customize/">关于</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://job.bootcss.com" onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'doc-home-navbar-job'])" target="_blank">登录</a></li>
+                <li><a href="http://expo.bootcss.com" onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'doc-home-navbar-expo'])" target="_blank">注册</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="banner">
+        <div class="banner_conter">
+            <h1>代课宝</h1>
+            <p>代课宝是专业进行代理上课的平台</p>
+        </div>
+    </div>
+</header>
+<!-- Login Screen -->
+<div class="login-wrapper">
+    <div class="login-container active">
+        <a href="index.html"><img width="100" height="30" src="images/logo-login%402x.png"></a>
+        <form action="">
+            <div class="form-group">
+                <input class="form-control" placeholder="Username or Email" type="text" >
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Password" type="text">
+                <input type="button" class="btn btn-default" value="登录">
+            </div>
+            <div class="form-options clearfix">
+                <a class="pull-right" href="#">忘记密码？</a>
+                <div class="text-left">
+                    <label class="checkbox"><input type="checkbox"><span>记住账号</span></label>
+                </div>
+            </div>
+        </form>
+        <!--
+        <div class="social-login clearfix">
+            <a class="btn btn-primary pull-left facebook" href="index-2.html"><i class="icon-facebook"></i>QQ登录</a>
+            <a class="btn btn-primary pull-right twitter" href="index-2.html"><i class="icon-twitter"></i>微信登录</a>
+        </div>
+        -->
+        <p class="signup">
+            还没有账号 <a href="register.html">立即注册</a>
+        </p>
+    </div>
+</div>
+<!-- End Login Screen -->
+
+
+</body>
+
+<footer>
+    <p>Copyright 2016. All Rights Reserved by CSU APPLE Lab</p>
+</footer>
+<script src="js/angular.js"></script>
 </body>
 </html>
